@@ -1,0 +1,513 @@
+
+/* *{
+    margin: 0px 0px;
+}
+*, *::before, *::after {
+   box-sizing: border-box;
+ }
+body{
+   background-color: black;
+    color:white;
+   font-family: 'Poppins', sans-serif;
+    margin: 0px 0px;
+} */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ html, body {
+   height: 100%;  /* Ensure the page takes up the full height */
+ }
+ 
+ /* body {
+   background-color: black;
+   color: white;
+   font-family: 'Poppins', sans-serif;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh; 
+ } */
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: linear-gradient(to bottom right, #0f0f0f, #1a001a); /* Dark gradient with purple tone */
+  background-attachment: fixed; /* Smooth scroll effect */
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  opacity: 0.15;
+  z-index: -1;
+}
+
+ 
+ /* Main Content */
+ main {
+   flex: 1; /* This allows the main content to take all available space */
+ }
+.nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+   /* background-color:  purple; */
+   background: linear-gradient(45deg, rgba(232, 126, 232, 0.9), rgba(50, 115, 220, 0.9));
+  
+   
+}
+.nav p{
+    font-size: 1.6rem;
+    color: rgb(169,176,184);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.nav ul{
+   
+    display: flex;
+    align-items: center;
+}
+.nav ul li{
+    list-style: none;
+    margin: 0px 23px;
+   
+}
+.nav ul li a{
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+    padding: 3px;
+    font-weight: bold;
+}
+
+.nav ul li a:hover{
+   color: rgb(169, 179, 184);
+    font-size: 1.2rem;
+    transition: 1.0s;
+
+}
+ .first{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 140px 0px;
+ }
+ @media (max-width: 768px) {
+   .first > div {
+     width: 90%;
+   }
+ }
+ 
+ .leftsection{
+
+   font-size: 2.6rem;
+   color:rgb(169, 179, 184);
+  
+ }
+
+ .leftsection .btn{
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #111;
+    border: 2px solid white;
+    color: white;
+    border-radius: 8px;
+    margin: 30px 0px;
+    cursor: pointer;
+ }
+ .leftsection .btn:hover{
+    color: black;
+    background: rgb(232, 126, 232);
+    transition: 1s;
+
+ }
+
+ .leftsection span{
+    color: rgb(232, 126, 232);
+ }
+ .rightsection{
+ 
+ text-align: center;
+ }
+ .rightsection img{
+   
+    width: 80%;
+    
+   
+ }
+ .second{
+    display: block;
+    text-align: left;
+    
+    
+      min-height: 40vh;
+    }
+    
+
+ 
+ h2{
+    font-size: 3.2rem;
+    font-style: none;
+    margin: 20px 100px;
+    text-shadow: 3px 3px 3px rgb(169, 179, 184);
+ }
+ h2 span{
+    color: rgb(232, 126, 232);
+    text-shadow: none;
+
+ }
+ .second div{
+margin: 4px 100px;
+font-size: 1.2rem;
+color: rgb(169, 179, 184);
+ }
+ u{
+    font-style: bolder;
+    color: rgb(232, 126, 232);
+ }
+ hr{
+    border: 0;
+    height: 1px;
+    /* background-color: rgb(232, 126, 232) ; */
+    background: linear-gradient(45deg, rgba(232, 126, 232, 0.9), rgba(50, 115, 220, 0.9));
+    margin: 60px 84px;
+ }
+
+ .third{
+    max-width: 80vw;
+    margin: 20px 100px;
+    height: 60vh;
+ }
+ .third span{
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-shadow:3px 3px 3px rgb(169, 179, 184) ;
+ }
+ .highlight {
+   color: rgb(232, 126, 232);
+  
+   text-shadow: 0px 0px 0px ;
+ }
+ h1{
+    margin: 25px 0px;
+    font-size: 1.2rem;
+ }
+ /* .skills-section {
+    background-color:rgb(232, 126, 232);
+   
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+   position: relative;
+   font-size: 1.2rem;
+  
+   margin: 60px auto;
+   left: 0;
+   border: 2px solid rgb(232, 126, 232);
+   border-radius: 10px;
+  }
+  
+ 
+ 
+  
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  
+ 
+  
+  .skill-box {
+    background: #1a1a1a;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+  }
+ 
+  
+  .skill-box:hover {
+    background-color: #222;
+  }
+  
+  .skill-box img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .skill-box span {
+    display: block;
+    font-size:1.1rem;
+    color: rgb(232, 126, 232);
+    text-shadow: 1px 1px 0px  rgb(169, 179, 184);
+  } */
+
+  /* Skills Section with Enhanced Design */
+.skills-section {
+   /* background: linear-gradient(45deg, rgba(232, 126, 232, 0.8), rgba(50, 115, 220, 0.8)); */
+   background: #111;
+   padding: 60px 20px;
+   text-align: center;
+   display: flex;
+   position: relative;
+   font-size: 1.2rem;
+   left: 80px;
+   margin: 60px 0;
+   border: 2px solid rgb(232, 126, 232);
+   border-radius: 10px;
+   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+   backdrop-filter: blur(10px);
+ }
+ 
+ /* Skill Box Grid */
+ .skills-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+   gap: 30px;
+   max-width: 1200px;
+   margin: auto;
+ }
+ 
+ /* Skill Box with Dynamic Hover Effects */
+ .skill-box {
+   background: #1a1a1a;
+   padding: 30px;
+   border: 1px solid white;
+   border-radius: 10px;
+   transition: 0.3s ease;
+   cursor: pointer;
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+ }
+ 
+ .skill-box:hover {
+   background-color: #333;
+   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+   transform: scale(1.05);
+   transition: all 0.3s ease;
+ }
+ 
+ .skill-box img {
+   width: 50px;
+   height: 50px;
+   margin-bottom: 15px;
+   transition: transform 0.3s ease;
+ }
+ 
+ .skill-box:hover img {
+   transform: rotate(360deg);  /* Rotating image on hover for fun */
+ }
+ 
+ .skill-box span {
+   display: block;
+   font-size: 1.1rem;
+   color: rgb(232, 126, 232);
+   text-shadow: 1px 1px 3px rgb(169, 179, 184);
+   transition: color 0.3s ease;
+ }
+ 
+ .skill-box:hover span {
+   color: #fff;  /* Change text color on hover */
+   text-shadow: 1px 1px 5px rgb(232, 126, 232);
+ }
+ .skill-box span1 {
+  display: block;
+  font-size: 1.1rem;
+  color: rgb(232, 126, 232);
+  text-shadow: 1px 1px 3px rgb(169, 179, 184);
+  transition: color 0.3s ease;
+  position: relative;
+  left: -10px;
+}
+
+.skill-box:hover span1 {
+  color: #fff;  /* Change text color on hover */
+  text-shadow: 1px 1px 5px rgb(232, 126, 232);
+}
+.skills-section {
+  background: radial-gradient(circle at top left, #2a003f, #0f0f0f);
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 0 25px rgba(232, 126, 232, 0.3);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.skill-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(232, 126, 232, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(232, 126, 232, 0.6);
+}
+
+.skill-box img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
+}
+
+.skill-box span {
+  font-size: 1rem;
+  color: #e87ee8;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.skill-box span1 {
+  font-size: 1rem;
+  color: #e87ee8;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+ 
+ /* Adding subtle Animation on Page Load for Skill Boxes */
+ @keyframes skillFadeIn {
+   0% {
+     opacity: 0;
+     transform: translateY(20px);
+   }
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ 
+ .skill-box {
+   animation: skillFadeIn 1s ease-in-out;
+ }
+ 
+ @keyframes boxShadow {
+   0% {
+     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+   }
+   50% {
+     box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.5);
+   }
+   100% {
+     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+   }
+ }
+ 
+ .skills-grid .skill-box {
+   animation: boxShadow 3s infinite ease;
+ }
+ 
+  /* footer{
+    background-color:#111;
+    
+    font-size: 1.2rem;
+    
+  }
+  .footer{
+    display: flex;
+    padding: 23px 122px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .footer ul li{
+    list-style: none;
+    margin: 4px 0px;
+
+  }
+  .text-center{
+    display: flex;
+   
+    justify-content: center;
+    
+    color: gray;
+    font-weight: bold;
+ 
+  }
+  h3{
+    cursor: pointer;
+  } */
+
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 60px;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #111;
+    color: white;
+  }
+  
+  .footer h3 {
+    margin-bottom: 15px;
+    color: #e87ee8;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .footer a:hover {
+    color: #e87ee8;
+    transition: 0.3s ease;
+  }
+  
+  .footer i {
+    margin-right: 8px;
+  }
+  
+  .text-center {
+    text-align: center;
+    background-color: #000;
+    padding: 15px 10px;
+    color: gray;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
